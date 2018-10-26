@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link 
+  rel = "stylesheet" 
+  type = "text/css" 
+  href = "aesthetics.css">
+  <title>Solids of Revolution</title>
+</head>
+
+<body>
+  <h1 style="font-size:200%;" id="maintitle"><center>Solids of Revolution</center></h1>
+  <p>Select whether your solid is created by revolving around a horizontal or vertical line.</p>
+  <p>Note the functions that define your solid.</p>
+  <p>Omit y = or x = when giving your functions or the equation of the axis of revolution.</p>
+  <p>Please write power functions as products (x*x) and trigonometric and exponential functions as strings</p>
+  <label><input type="radio" name="proud" id = "horizontal" > Horizontal</label>
+  <label><input type="radio" name="proud" id = "vertical" > Vertical</label>
+  <p><center>Function &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimum x value &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Maximum x value &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Axis of revolution &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center></p> 
+  <center><input type="text" id = "function" placeholder="f(x)" value=""  required>
+  <input type="text" id = "x_min" placeholder="x min" value=""  required>
+  <input type="text" id = "x_max" placeholder="x max" value=""  required>
+  <input type="text" id = "x_line" placeholder="y = or x =" value=""  required>
+  <a  class = "button" onclick = "final_step()" type="submit">Calculate!</a></center>
+  <br>
+  <br>
+  <p>The volume of the solid is:</p>
+  <p style="font-size:175%;" class="happy" id="answer"></p>
+  <script type="text/javascript" src="main.js"></script>
+  <br>
+ 
+
+
+
+<h2><center>Why I made this</center></h2>
+<p><center>After learning about solids of revolution in my calculus class, I became interested in creating a program that could find the volume of a solid given user-inputed criteria. While the program is capable of finding the volume of horizontally and vertically revolved solids, the goal is to expand functionality to solids around slant lines.</center></p>
+<br>
+<h2><center>How it works</center></h2>
+<p><center>To avoid the issue of finding an inverse function when finding the volume of a vertically revolved solid, I used Pappus' Theorem (V = Ad, where A is the area of the enclosed region and d is the distance travelled by the centroid). I then created a numerical integral calculator so I could find the area of the region and the x coordinate of the centroid. For horizontally revolved solids, I simply used the integral calculator to use the disk method of finding volume.</center></p>
+  
+</body>
+
+</html>
